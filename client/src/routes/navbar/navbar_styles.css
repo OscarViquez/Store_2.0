@@ -1,0 +1,27 @@
+
+nav {
+  background-color: #f5f5f5;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.4rem 0;
+}
+
+li {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.cta-button {
+    background: #4F46E5;
+    color: #fff;
+    padding: .6rem 1rem;
+    border-radius: 5px;
+}
