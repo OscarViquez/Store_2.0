@@ -1,0 +1,25 @@
+
+.hero {
+    background-color: #fceceb;
+    padding: 38vh 1rem 5vh 1rem;
+    background-image: url('https://ohv-store-v2.netlify.app/images/hero-image.png');
+    background-position: 0% 70%;
+    background-size: cover;
+  }
+  
+  .hero-content {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 4vw;
+  
+  }
+  
+  .hero__title {
+    font-size: 54px;
+    font-weight: 600;
+  }
+  
+  
+  .hero-products {
+    
+  }

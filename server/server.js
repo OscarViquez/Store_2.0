@@ -7,7 +7,10 @@ app.use(express.json())
 
 const mysql = require('mysql');
 const database = mysql.createConnection({
-
+    user: 'root',
+    host: 'localhost',
+    password: 'password',
+    database: 'online_store'
 })
 
 app.get('/products', (req, res) => {
