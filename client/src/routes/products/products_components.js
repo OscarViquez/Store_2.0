@@ -4,6 +4,8 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import './products_styles.css'
 
+
+import { productsData } from '../../products';
 // import Components 
 // ============================================== // 
 import { FilterAside } from '../../components/Filter-Aside/filter-aside-component';
@@ -26,9 +28,9 @@ export const Products = () => {
   useEffect(() => {
     const displayProducts = async () => {
       try {
-        const response = await fetch('http://localhost:5500/products')
-        const data = await response.json()
-        setAllProducts(data)
+        // const response = await fetch(productsData)
+        // const data = await response.json()
+        setAllProducts(productsData)
       }
 
       catch (error) {
@@ -67,7 +69,7 @@ export const Products = () => {
     <>
       {/* Hero Section /}
       {/* ============================================================================*/}
-      <Hero classNameForBG={'hero hero-products'} />
+      <Hero classNameForBG={'hero hero-products'} title={'All Drinks'} />
 
       {/* Search Box Section /}
       {/* ============================================================================*/}
