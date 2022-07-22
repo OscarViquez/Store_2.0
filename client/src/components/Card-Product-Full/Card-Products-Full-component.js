@@ -4,6 +4,7 @@ import '../Card-Product-Full/Card-Product-Full-styles.css'
 const CardProductsFull = (props) => {
 
   const { image_sm, name, desc_card_simple, price } = props.content;
+
   return (
     <>
       <figure className='product-card-full'>

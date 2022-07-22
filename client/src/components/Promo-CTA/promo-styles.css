@@ -1,0 +1,85 @@
+.promo {
+  padding: 20rem 1rem;
+  background-image: url(../../assets/images/promo-background.png);
+  background-size: cover;
+  background-position: left bottom;
+}
+
+.promo-cta-wrapper {
+  background-color: #feb81a;
+}
+
+.promo-content {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.promo__title {
+  font-size: clamp(2.13rem, calc(1.08rem + 2.8vw), 3rem);
+  line-height: 1.2;
+  font-weight: 500;
+  margin-bottom: 1.6rem;
+}
+
+.promo__copy {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 1.6rem;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+.promo-input {
+  width: 422px;
+  padding: 12px 0.8rem;
+
+  font-family: "Poppins", sans-serif;
+
+  border: none;
+  border-bottom: 2px solid #1b1b1b;
+}
+
+.promo-submit {
+  width: 180px;
+  margin-left: 0.6rem;
+  padding: 12px 0;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+
+  background-color: #ffffff;
+  border: 2px solid #1b1b1b;
+  border-radius: 5px;
+}
+
+@media (max-width: 680px) {
+  .promo {
+    padding: 10rem 1rem;
+  }
+
+  .promo-input {
+    width: 65%;
+  }
+
+  .promo-submit {
+    width: 30%;
+    margin-left: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .promo {
+    padding: 6rem 1rem;
+  }
+
+  .promo-input {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .promo-submit {
+    width: 100%;
+    margin-left: 0;
+  }
+}

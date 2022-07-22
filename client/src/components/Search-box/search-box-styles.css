@@ -16,7 +16,11 @@
   border-radius: 4px;
 
   width: 30%;
-  padding: 0.4rem 1rem;
+  padding: 0.6rem 1rem;
+}
+
+.search-box::placeholder {
+  font-family: 'Poppins', sans-serif;
 }
 
 @media (max-width: 920px) {

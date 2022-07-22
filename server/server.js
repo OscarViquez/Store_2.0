@@ -1,17 +1,19 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
+const mysql = require('mysql');
 
 app.use(cors())
 app.use(express.json())
 
-const mysql = require('mysql');
+
 const database = mysql.createConnection({
     user: 'root',
     host: 'localhost',
     password: 'password',
     database: 'online_store'
 })
+
 
 app.get('/products', (req, res) => {
     database.query('SELECT * FROM product;', (err, result) => {
@@ -22,6 +24,7 @@ app.get('/products', (req, res) => {
         }
     })
 })
+
 
 
 app.listen(5500, () => {

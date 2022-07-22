@@ -1,5 +1,5 @@
 .products-page-main {
-  background: linear-gradient(180deg, #fbf3e8 0%, rgba(251, 243, 232, 0) 4.6%);
+  background: linear-gradient(180deg, #FBF3E8 0%, #FFFFFF 3.01%, #FFFFFF 92.05%, #FFEFCF 96.27%);
   padding: 1rem 0;
 }
 
@@ -13,7 +13,7 @@
 
 .products-filters-section {
   width: 23%;
-  padding: 1rem 2rem 1rem 1rem;
+  padding: 1rem 4rem 1rem 1rem;
 }
 
 .products-filter {
@@ -24,6 +24,11 @@
   font-size: 20px;
   font-weight: 500;
   border-bottom: #353535 solid 2px;
+  margin-bottom: .5rem;
+}
+
+.products-filter p{
+  margin-bottom: .5rem;
 }
 
 .all-products-section {

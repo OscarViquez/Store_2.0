@@ -9,11 +9,11 @@ const ProductsList = (props) => {
         <>
             {/* Card Components*/}
             {/* ============================================================================*/}
-            {products.map((product, key) => {
+            {products.map((product) => {
                 return (
                     <CardProductsFull
                         content={product}
-                        key={key}
+                        key={product.product_id}
                     />
                 )
             })}

@@ -8,7 +8,7 @@ export const Navbar = () => {
       <nav className='navbar'>
         <div className='navbar-wrapper'>
           <div className='navbar-logo'>
-            <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Shopify_logo_2018.svg/2560px-Shopify_logo_2018.svg.png' alt='Store Logo' />
+            <img src='images/store-logo.png' alt='Store Logo' />
           </div>
           <ul className='navbar-list'>
             <li className='navbar-item'>
