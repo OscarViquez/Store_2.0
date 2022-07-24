@@ -7,10 +7,8 @@ export const Contact = () => {
   return (
     <div>
       {/* <img src='images/image-1.png' alt='something'/> */}
-      <div className='promo-cta-wrapper'>
-        <Promo />
-        <Footer />
-      </div>
+      <Promo />
+      <Footer />
     </div>
   )
 }

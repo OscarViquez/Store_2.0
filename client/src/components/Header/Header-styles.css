@@ -1,0 +1,59 @@
+.header {
+  background-color: antiquewhite;
+  padding: 20rem 2rem;
+
+  background-image: url("https://ohv-store-v2.netlify.app/images/hero-image.png");
+  background-position: 0% 70%;
+  background-size: cover;
+}
+
+.header-content {
+  max-width: 1440px;
+  margin: 0 auto;
+  /* background-color: #1b1b1b; */
+}
+
+.header__title {
+  max-width: 747px;
+  margin-bottom: 2.2rem;
+
+  line-height: 1.2;
+  font-size: clamp(2.25rem, calc(1.71rem + 2.68vw), 3.63rem);
+  font-weight: 600;
+}
+
+.header__title--highlight {
+  color: #525af6;
+}
+
+.header__subtitle {
+  max-width: 747px;
+  margin-bottom: 2.2rem;
+
+  font-size: clamp(1rem, calc(0.9rem + 0.49vw), 1.25rem);
+  font-weight: 500;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+
+
+@media (max-width: 840px) {
+  .header {
+    background-position: 20% 0%;
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    background-position: 40% 0%;
+    padding: 14rem 2rem 10rem 2rem;
+  }
+  .header-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+}

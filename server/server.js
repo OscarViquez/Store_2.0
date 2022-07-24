@@ -16,7 +16,28 @@ const database = mysql.createConnection({
 
 
 app.get('/products', (req, res) => {
-    database.query('SELECT * FROM product;', (err, result) => {
+    database.query('SELECT * FROM product WHERE product_id;', (err, result) => {
+        if (err) {
+            console.log(err)
+        } else {
+            res.send(result)
+        }
+    })
+})
+
+
+app.get('/products/filterBy=ASCPrice', (req, res) => {
+    database.query('SELECT * FROM product ORDER BY price ASC;', (err, result) => {
+        if (err) {
+            console.log(err)
+        } else {
+            res.send(result)
+        }
+    })
+})
+
+app.get('/products/filterBy=DESCPrice', (req, res) => {
+    database.query('SELECT * FROM product ORDER BY price DESC;', (err, result) => {
         if (err) {
             console.log(err)
         } else {

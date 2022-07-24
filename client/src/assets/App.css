@@ -13,9 +13,37 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.button {
+  display: inline-block;
+  border: 2px solid #1b1b1b;
+  border-radius: 5px;
+  text-align: center;
 
+  background-color: #ffffff;
+  padding: 0.8rem 3.65rem;
 
+  font-size: 16px;
+  font-weight: 500;
 
-/* .container {
-  padding: 3rem 0;
-} */
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.button--light {
+  border: 2px solid #1b1b1b;
+  background-color: #ffffff;
+  color: #1b1b1b;
+}
+
+.button--dark {
+  border: 2px solid #525af6;
+  background-color: #525af6;
+  color: #ffffff;
+}
+
+.button:hover {
+  border: 2px solid #000000;
+  background-color: #000000;
+  color: #ffffff;
+  transition: 0.2s ease-in-out;
+}
