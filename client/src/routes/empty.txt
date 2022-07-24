@@ -1,0 +1,25 @@
+
+
+
+  // Function that, when triggered, will order the Products from A-Z (Alphabetical Order)
+  // ========================================================================================
+  // function byAlphabetOrder() {
+  //   const byAlphabetical = products.sort((a, b) => {
+  //     console.log(a.name.localeCompare(b.name))
+  //     return a.name.localeCompare(b.name)
+  //   })
+
+  //   setOrderByAZ(byAlphabetical)
+  //   console.log(orderByAZ)
+
+  // }
+
+
+  // function byLowtoHigh() {
+  //   const sortByLowtoHigh = products.sort((a, b) => {
+  //     console.log(a.name.localeCompare(a.price - b.price))
+  //     return a.price - b.price
+  //   })
+
+  //   setOrderByNum(sortByLowtoHigh)
+  // }

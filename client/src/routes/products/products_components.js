@@ -2,10 +2,12 @@
 // ============================================== // 
 import React from 'react';
 import { useState, useEffect } from 'react';
+
+// import CSS / Styling
+// ============================================== // 
 import './products_styles.css'
+// import { productsData } from '../../products';
 
-
-import { productsData } from '../../products';
 // import Components 
 // ============================================== // 
 import { FilterAside } from '../../components/Filter-Aside/filter-aside-component';
@@ -15,22 +17,37 @@ import SearchBox from '../../components/Search-box/search-box-component';
 import Promo from '../../components/Promo-CTA/promo-component';
 import { Footer } from '../footer/footer_component';
 
-// import CSS / Styling
-// ============================================== // 
+
 
 export const Products = () => {
+  // ========================================================================================
+
   const [products, setAllProducts] = useState([])
-  const [orderByAZ, setOrderByAZ] = useState(products);
-  const [orderByNum, setOrderByNum] = useState(products);
+
+  let fetchUrl = '/products';
+
+  // ========================================================================================
+  const displayProducts = async (url) => {
+    try {
+      const response = await fetch(`http://localhost:5500${url}`)
+      const data = await response.json()
+      setAllProducts(data)
+    }
+
+    catch (error) {
+      console.log(error)
+    }
+  };
 
   // Fetching Data From DataBase using FETCH and PROMISES (async, await, try, catch)
   // ========================================================================================
+
   useEffect(() => {
     const displayProducts = async () => {
       try {
-        // const response = await fetch(productsData)
-        // const data = await response.json()
-        setAllProducts(productsData)
+        const response = await fetch(`http://localhost:5500${fetchUrl}`)
+        const data = await response.json()
+        setAllProducts(data)
       }
 
       catch (error) {
@@ -38,30 +55,26 @@ export const Products = () => {
       }
     };
     displayProducts()
+
   }, [])
 
-  // Function that, when triggered, will order the Products from A-Z (Alphabetical Order)
   // ========================================================================================
-  // function byAlphabetOrder() {
-  //   const byAlphabetical = products.sort((a, b) => {
-  //     console.log(a.name.localeCompare(b.name))
-  //     return a.name.localeCompare(b.name)
-  //   })
 
-  //   setOrderByAZ(byAlphabetical)
-  //   console.log(orderByAZ)
+  function recommended() {
+    fetchUrl = '/products'
+    return displayProducts(fetchUrl)
+  }
 
-  // }
+  function lowToHighPrices() {
+    fetchUrl = '/products/filterBy=ASCPrice'
+    return displayProducts(fetchUrl)
+  }
 
 
-  // function byLowtoHigh() {
-  //   const sortByLowtoHigh = products.sort((a, b) => {
-  //     console.log(a.name.localeCompare(a.price - b.price))
-  //     return a.price - b.price
-  //   })
-
-  //   setOrderByNum(sortByLowtoHigh)
-  // }
+  function highToLowPrices() {
+    fetchUrl = '/products/filterBy=DESCPrice'
+    return displayProducts(fetchUrl)
+  }
 
   // Fetching Data From DataBase using FETCH and PROMISES (async, await, try, catch)
   // ========================================================================================
@@ -75,6 +88,25 @@ export const Products = () => {
       {/* ============================================================================*/}
       <SearchBox className='search-box' // onChangeHandler={onSearchChange} 
         placeholder='Search Product Here' />
+      {/* <button onClick={products}> Default  </button> */}
+      <div>
+        <div>
+          <input name="filterBy" type="radio" className='button button--light' onClick={recommended} />
+          <label htmlFor="Recommended">Recommended</label>
+        </div>
+
+        <div>
+          <input name="filterBy"  type="radio" className='button button--light' onClick={lowToHighPrices} />
+          <label htmlFor="Low To Highest Price">Lowest To Highest Price</label>
+        </div>
+
+        <div>
+          <input name="filterBy"  type="radio" className='button button--light' onClick={highToLowPrices} />
+          <label htmlFor="Highest To Lowest Price"> Highest To Lowest Price</label>
+        </div>
+
+      </div>
+
 
 
       {/* Main Products Section /}
