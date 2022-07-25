@@ -7,7 +7,7 @@ import imageOfWaterlooDrink from '../../assets/images/home-section-waterloo.svg'
 // =========================================
 
 import { Header } from '../../components/header/Header-component'
-import { Section } from '../../components/section/section-component'
+import { Section } from '../../components/Section/section-component'
 import Promo from '../../components/promo-section/promo-component';
 import { Footer } from '../footer/footer_component';
 
