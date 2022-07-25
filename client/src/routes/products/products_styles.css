@@ -47,9 +47,9 @@
     flex-flow: column nowrap;
   }
 
-  .products-filters-section {
+  /* .products-filters-section {
     display: none;
-  }
+  } */
   .all-products-section {
     width: 100%;
   }

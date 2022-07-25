@@ -10,11 +10,11 @@ import './products_styles.css'
 
 // import Components 
 // ============================================== // 
-import { FilterAside } from '../../components/Filter-Aside/filter-aside-component';
-import { Hero } from '../../components/Hero/Hero-component';
-import ProductsList from '../../components/Products-list/products-list-components';
-import SearchBox from '../../components/Search-box/search-box-component';
-import Promo from '../../components/Promo-CTA/promo-component';
+import { FilterAside } from '../../components/filterAside/filter-aside-component';
+import { Hero } from '../../components/hero/Hero-component';
+import ProductsList from '../../components/product-list/products-list-components';
+import SearchBox from '../../components/search-box/search-box-component';
+import Promo from '../../components/promo-section/promo-component';
 import { Footer } from '../footer/footer_component';
 
 
@@ -60,22 +60,55 @@ export const Products = () => {
 
   // ========================================================================================
 
-  function recommended() {
+  const recommended = () =>  {
     fetchUrl = '/products'
     return displayProducts(fetchUrl)
   }
 
-  function lowToHighPrices() {
+  const lowToHighPrices = () =>  {
     fetchUrl = '/products/filterBy=ASCPrice'
     return displayProducts(fetchUrl)
   }
 
-
-  function highToLowPrices() {
-    fetchUrl = '/products/filterBy=DESCPrice'
+  const highToLowPrices = () =>  {
+    fetchUrl = '/products/filterBy=DESCPrice' 
     return displayProducts(fetchUrl)
   }
 
+  const filterByBrandOlipop = () => {
+    fetchUrl = '/products/filterBy=Brand=olipop';
+    return displayProducts(fetchUrl)
+  }
+
+  const filterByBrandTaika = () => {
+    fetchUrl = '/products/filterBy=Brand=taika';
+    return displayProducts(fetchUrl)
+  }
+
+  const filterByBrandCalpico = () => {
+    fetchUrl = '/products/filterBy=Brand=calpico';
+    return displayProducts(fetchUrl)
+  }
+  
+  const filterByBrandLaCroix = () => {
+    fetchUrl = '/products/filterBy=Brand=laCroix';
+    return displayProducts(fetchUrl)
+  }
+
+  const filterByFlavorMilky = () => {
+    fetchUrl = '/products/filterBy=Flavor=milky';
+    return displayProducts(fetchUrl)
+  }
+  
+  const filterByFlavorFruit = () => {
+    fetchUrl = '/products/filterBy=Flavor=fruit';
+    return displayProducts(fetchUrl)
+  }
+
+  const filterByFlavorCoffee = () => {
+    fetchUrl = '/products/filterBy=Flavor=coffee';
+    return displayProducts(fetchUrl)
+  }
   // Fetching Data From DataBase using FETCH and PROMISES (async, await, try, catch)
   // ========================================================================================
   return (
@@ -88,36 +121,34 @@ export const Products = () => {
       {/* ============================================================================*/}
       <SearchBox className='search-box' // onChangeHandler={onSearchChange} 
         placeholder='Search Product Here' />
-      {/* <button onClick={products}> Default  </button> */}
-      <div>
-        <div>
-          <input name="filterBy" type="radio" className='button button--light' onClick={recommended} />
-          <label htmlFor="Recommended">Recommended</label>
-        </div>
-
-        <div>
-          <input name="filterBy"  type="radio" className='button button--light' onClick={lowToHighPrices} />
-          <label htmlFor="Low To Highest Price">Lowest To Highest Price</label>
-        </div>
-
-        <div>
-          <input name="filterBy"  type="radio" className='button button--light' onClick={highToLowPrices} />
-          <label htmlFor="Highest To Lowest Price"> Highest To Lowest Price</label>
-        </div>
-
-      </div>
-
 
 
       {/* Main Products Section /}
       {/* ============================================================================*/}
       <main className='products-page-main'>
         <div className='products-page-main__wrapper'>
+
           {/* Products Filters Section Components*/}
           {/* ============================================================================*/}
-          <section className='products-filters-section'>
-            <FilterAside />
-          </section>
+          <aside className='products-filters-section'>
+            <FilterAside 
+              filterByDefault={recommended}
+
+              filterByBrands1={filterByBrandOlipop}
+              filterByBrands2={filterByBrandTaika}
+              filterByBrands3={filterByBrandCalpico}
+              filterByBrands4={filterByBrandLaCroix}
+
+
+              filterByPrice1={lowToHighPrices}
+              filterByPrice2={highToLowPrices}
+
+              filterByFlavor1={filterByFlavorMilky}
+              filterByFlavor2={filterByFlavorFruit}
+              filterByFlavor3={filterByFlavorCoffee}
+
+            />
+          </aside>
 
           {/* Products Section Main Components*/}
           {/* ============================================================================*/}

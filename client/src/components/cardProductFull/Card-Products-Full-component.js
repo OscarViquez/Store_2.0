@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Card-Product-Full/Card-Product-Full-styles.css'
+import '../cardProductFull/Card-Product-Full-styles.css'
 
 const CardProductsFull = (props) => {
 
