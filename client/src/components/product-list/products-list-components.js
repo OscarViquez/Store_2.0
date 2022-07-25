@@ -1,5 +1,5 @@
 import React from 'react'
-import CardProductsFull from '../../components/Card-Product-Full/Card-Products-Full-component'
+import CardProductsFull from '../../components/cardProductFull/Card-Products-Full-component'
 
 const ProductsList = (props) => {
 

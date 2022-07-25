@@ -1,0 +1,12 @@
+.products-filter-radios > label{
+    margin-left: .6em;
+}
+
+@media (max-width: 1080px) {
+    .products-filters-section {
+      /* display: none; */
+      width: 100%;
+    }
+
+
+  }

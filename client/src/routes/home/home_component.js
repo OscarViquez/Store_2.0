@@ -6,9 +6,9 @@ import imageOfWaterlooDrink from '../../assets/images/home-section-waterloo.svg'
 
 // =========================================
 
-import { Header } from '../../components/Header/Header-component'
-import { Section } from '../../components/Section/section-component'
-import Promo from '../../components/Promo-CTA/promo-component';
+import { Header } from '../../components/header/Header-component'
+import { Section } from '../../components/section/section-component'
+import Promo from '../../components/promo-section/promo-component';
 import { Footer } from '../footer/footer_component';
 
 // =========================================
@@ -43,14 +43,14 @@ export const Home = () => {
     image_alt: 'Image of amazing drinks being packed in to a large box'
   }
 
-
   return (
     <>
       <Header content={headerData} />
       <Section sectionContent={sectionOneData} />
       <Section sectionContent={sectionTwoData} />
-      <Promo/>
-      <Footer/>
+      <Promo />
+      <Footer />
     </>
   )
+  
 }

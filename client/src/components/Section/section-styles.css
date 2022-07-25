@@ -75,12 +75,8 @@
 /* ================================= */
 
 @media (max-width: 780px) {
-  .section-wrapper {
+  .section-wrapper,.section-wrapper--reverse {
     flex-direction: column;
-  }
-
-  .section-wrapper--reverse {
-    flex-direction: column-reverse;
   }
 
   .section-copy-wrapper,
